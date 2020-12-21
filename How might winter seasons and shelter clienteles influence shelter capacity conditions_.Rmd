@@ -25,7 +25,7 @@ install.packages("flextable")
 Propensity Scroe Matching, Logistic Regression, Shelter Occupancy Condition, Observational Study, Casual Inference
 
 ## Abstract
-Shelter’s occupancy conditions may be affected by shelter clienteles and winter seasons. This study uses logistic regression model combined with propensity score matching method to predict the relationship between shelter occuapncy conditions and shelter clienteles as well as winter seasons. This study is based on observational data.
+Shelter’s occupancy conditions may be affected by shelter clienteles and winter seasons. This study uses logistic regression model combined with propensity score matching method to predict the relationship between shelter occuapncy conditions and shelter clienteles as well as winter seasons. The result shows that during winter seasons, shelter capacity is more likely to be exceeded. This study is based on observational data.
 
 ## Introduction
 
@@ -40,7 +40,7 @@ This is an observational study, and the data set in this project is about daily 
 ## Methodology
 
 ### Data
-The Daily Shelter Occupancy Data aims to collect data of all functional shelters in the Toronto Area. This dataset can help policymakers making a more proper decision regarding shelter programs in the Toronto Area. This is an observational study with 39381 observations. All the data was collected every day at 4 am, from January to December, in 2019. The population was all functioning shelters in the Toronto area from January 1 to December 31, 2019. The information of Violence Against Women shelters was excluded from the dataset. This choice is reasonable because such shelters should be kept confidential to prevent victims from being located.
+The Daily Shelter Occupancy Data aims to collect data of all functional shelters in the Toronto Area. The data is obtained from Open Data Toronto Catalogue. This dataset can help policymakers making a more proper decision regarding shelter programs in the Toronto Area. This is an observational study with 39381 observations. All the data was collected every day at 4 am, from January to December, in 2019. The population was all functioning shelters in the Toronto area from January 1 to December 31, 2019. The information of Violence Against Women shelters was excluded from the dataset. This choice is reasonable because such shelters should be kept confidential to prevent victims from being located.
 
 There are 13 variables in this dataset. Variables include basic information such as city, street, occupancy date and postcode information, and shelter information such as sector, capacity and occupancy. Here is an overview of the original dataset.
 
@@ -103,13 +103,16 @@ knitr::kable(table_2,
 
 
 ### Model
-This study uses logistic model because it is suitable for analyzing relationship between binary dependent variable and a groupd of independent variables.
+This study uses logistic model because it is suitable for analyzing relationship between binary dependent variable and a grouped of independent variables.
 
-Here is the general model of the logictic model:
+Here is the general model of the logistic model:
 
 $$log(\frac{p}{1−p})=\beta_0 + \beta_1X_1 + \beta_2X_2  + ...+\beta_nX_n$$
       
                               
+
+(Equation 1)
+
 $x_1$...$x_n$ represent the independent variables.
 
 p represents the probability of the event of interest occuring
@@ -125,6 +128,8 @@ Hence, the logistic regression model for this study will be:
 
 
  $$log(\frac{p}{1−p})=\beta_0 + \beta_1\ * \ winter\ or\ not\ + \beta_2\ * \ sector\ $$
+ 
+(Equation 2) 
  
 p represents the probability of a shelter capacity being exceeded
 
@@ -175,6 +180,9 @@ Therefore, the new logistic model becomes:
 
 
 $$log(\frac{p}{1−p})=\beta_0 + \beta_1\ * \ winter\ or\ not\ $$
+
+(Equation 3)
+
 Table 5 shows the summary of new model
 ```{r}
 newglm <- glm(if_exceed ~ winter_or_not, 
@@ -286,6 +294,8 @@ http://mgimond.github.io/ES218/Week03a.html
 \newpage
 
 ##Github Link
+
+Code and data supporting this analysis is available at:
 
 https://github.com/wei-jia99/STA304_Final-Project.git
 
