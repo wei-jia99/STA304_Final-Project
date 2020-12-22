@@ -277,6 +277,8 @@ In the future, the data collection can focus on more aspects of shelter, such as
 \newpage
 ## References
 
+About Daily Shelter Occupancy. Open Data Toronto. Retrieved December, 2020, from https://open.toronto.ca/dataset/daily-shelter-occupancy/
+
 Homelessness in California. (2017). Retrived from http://www.auditor.ca.gov/reports/2017-112/summary.html
 
 Toronto Street Needs Assessment 2018 Results Report. (2018). Retrieved from https://www.homelesshub.ca/sites/default/files/attachments/99be-2018-SNA-Results-Report.pdf
@@ -286,8 +288,6 @@ Stephanie. (2019, August 08). Propensity Score Matching: Definition & Overview. 
 Update on Shelter Occupancy and the Quality Assurance. Review of Shelter Access(2013) https://www.toronto.ca/legdocs/mmis/2014/ex/bgrd/backgroundfile-66029.pdf
 
 http://mgimond.github.io/ES218/Week03a.html
-
-
 
 
 
